@@ -191,7 +191,7 @@
                     },
                     error: (err) => {
                         alertify.set('notifier', 'position', 'bottom-left')
-                        alertify.error(err.statusText);
+                        alertify.error(err.responseText);
                     }
                 })
             })
@@ -225,7 +225,7 @@
                     },
                     error: (err) => {
                         alertify.set('notifier', 'position', 'bottom-left')
-                        alertify.error(err.statusText);
+                        alertify.error(err.responseText);
                     }
                 })
             })

@@ -18,10 +18,9 @@
         
         echo json_encode(["data"=>$row,"message"=>"welcome"]);
         if (isset($_SESSION['user'])) {
-            if(isset($_SESSION['admin'])){
-                header("Location: ../../hw/admin/index.php", true, 200);
-                    
-            }
+            if(isset($_SESSION['admin']))
+                exit();
+            
             else {
                 header("Location: ../index.php", true, 301);
                 exit();
@@ -32,6 +31,7 @@
     else {
         header("HTTP/1.0 404 Incorrect Username or Password ");
         echo "Incorrect Username or Password";
+        die();
     }
 
 ?>

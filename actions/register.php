@@ -17,14 +17,8 @@
     
     function EmailIsExist($email_)
     {
-        $query = "select * from users where email='$email_'";
-        $servername = "localhost";
-        $username = "root";
-        $password = "";
-        $dbName='hw';
-        // Create connection
-        $conn = mysqli_connect($servername, $username, $password,$dbName);
-        
+        include '../config/db.php';
+        $query = "select * from users where email='$email_'";        
         $result = $conn->query($query);
         
         if($result->num_rows > 0){
@@ -34,14 +28,8 @@
     }
     function PhoneIsExist($phone_)
     {
-        $query = "select * from users where phone='$phone_'";
-        $servername = "localhost";
-        $username = "root";
-        $password = "";
-        $dbName='hw';
-        // Create connection
-        $conn = mysqli_connect($servername, $username, $password,$dbName);
-        
+        include '../config/db.php';
+        $query = "select * from users where phone='$phone_'";        
         $result = $conn->query($query);
         
         if($result->num_rows > 0){
