@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body.dashboard{
+    overflow: hidden;
+}
+
+.flex-row{
+    display: flex;
+    width: 100vw;
+    overflow: hidden;
+    gap: 2rem;
+    padding-right: 2rem;
+    
+}
+.flex-row aside{
+    
+    position: fixed;
+    min-width: 260px;
+    background-color: #fff;
+    box-shadow: rgba(100, 100, 100, 0.1) 0px 3px 9px 0px;
+    height: 100vh;
+    padding: 2rem ;
+}
+.dashboard-wrapper {
+    background-color: #FAFAFA;
+    height: 100vh;
+    position: absolute;
+    inset: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+    
+}
+.dashboard-wrapper::-webkit-scrollbar {
+    width: 10px;
+    border-radius: 50px;
+}
+
+.dashboard-wrapper::-webkit-scrollbar-thumb {
+    background-color: #ccc;
+}
+.dashboard-wrapper .wrapper-content{
+    width: calc(100% - 270px);
+    padding-block: 3rem;
+    max-width: 1200px;
+    margin-left: 290px;
+}
+.table-container {
+    max-width: 1400px;
+    min-height: 200px;
+    overflow-x: auto;
+    margin-block: 1rem ;
+    background-color: #fff;
+    box-shadow: rgba(100, 100, 100, 0.1) 0px 3px 9px 0px;
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+.table-container::-webkit-scrollbar {
+    height: 5px;
+    border-radius: 50px;
+}
+
+.table-container::-webkit-scrollbar-thumb {
+    background-color: #ccc;
+}
+
+table {
+    padding-bottom: 1rem !important;
+}
+
+table thead tr th {
+    border: 0 !important;
+    border-bottom: 1px solid #ccc !important;
+    text-align: center !important
+}
+
+table tbody :is(tr, td) {
+    border: 0 !important;
+    min-width: 70px;
+    text-align: center !important;
+    border-bottom: 1px solid #ccc !important;
+
+}
+
+table.dataTable.no-footer {
+    border: none;
+}
+
+.table-container span{
+    color: #fff !important;
+}
+.table-container span>.paginate_button {
+    margin-inline-start: 10px !important;
+    background-color: #ccc !important;
+    padding: 0 !important;
+    border-radius: 50% !important;
+    width: 2rem !important;
+    height: 2rem !important;
+    line-height: 2 !important;
+    border: 0 !important;
+    outline: none !important;
+}
+
+.table-container span>.paginate_button.current {
+    background: #3b71ca !important;
+    color: #fff !important;
+}
+
+.table-container span>.paginate_button.current:hover {
+    background: #3b71ca !important;
+    color: #fff !important;
+    border: 0 !important;
+    outline: none !important;
+}
+
+.table-container span>.paginate_button:hover {
+    background: #ccc !important;
+    border: 0 !important;
+    outline: none !important;
+}
+.table-container .paginate_button.previous ,
+.table-container .paginate_button.next {
+    display: none !important;
+}

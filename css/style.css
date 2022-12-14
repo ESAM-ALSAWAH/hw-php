@@ -1,0 +1,9 @@
+input[type='date']{
+    color: #4f4f4f !important
+}
+input[type='date']:focus-visible{
+    border-color:#3b71ca !important;
+    border-width: 2px !important;
+    outline: none !important;
+    ;
+}
